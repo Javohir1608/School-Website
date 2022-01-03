@@ -1,0 +1,625 @@
+/* Styles Code From WebSite */
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+}
+.sec1{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url(../images/bg-img.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    border-bottom: 1px solid #ccc;
+}
+.sec1 .logo{
+    position: absolute;
+    top: 40px;
+    left: 60px;
+    font-size: 40px;
+    font-weight: 600;
+    color: #ffd45e;
+    text-decoration: none;
+    margin-left: 80px;
+    letter-spacing: 1px;
+}
+.sec1 img
+{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 30px;
+}
+.sec1 #toggle{
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: #0084f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.2s;
+    z-index: 1000;
+}
+.sec1 #toggle.active{
+    background: #ff0066;
+}
+.sec1 #toggle::before{
+    content: "";
+    position: absolute;
+    width: 28px;
+    height: 2px;
+    background: #fff;
+    transform: translateY(-10px);
+    box-shadow: 0 10px 0 #fff;
+    transition: 0.2s;
+}
+.sec1 #toggle.active::before{
+    transform: translateY(0px) rotate(45deg);
+    box-shadow: 0 0 0 transparent;
+}
+.sec1 #toggle::after{
+    content: "";
+    position: absolute;
+    width: 28px;
+    height: 2px;
+    background: #fff;
+    transform: translateY(10px);
+    transition: 0.2s;
+}
+.sec1 #toggle.active::after{
+    transform: translateY(0px) rotate(-45deg);
+}
+.sec1 #sidebar{
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 300px;
+    height: 100vh;
+    background: #0084f0;
+    transition: 0.3s ease;
+    z-index: 1000;
+}
+.sec1 #sidebar.active{
+    left: 0;
+}
+.sec1 #sidebar ul{
+    position: relative;
+    margin-top: 70px;
+}
+.sec1 #sidebar ul li{
+    list-style: none;
+    width: 100%;
+    padding: 15px 40px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.sec1 #sidebar ul li:hover{
+    background: #00c3ff;
+}
+.sec1 #sidebar ul li a{
+    text-decoration: none;
+    font-size: 25px;
+    color: #fff;
+    letter-spacing: 2px;
+    padding-right: 150px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    padding-left: 100px;
+}
+.content div{
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 0 40px;
+}
+.content div h2{
+    font-size: 5em;
+    color: #f5e8bf;
+    letter-spacing: 2px;
+}
+.content div h2 span{
+    color: #ff7f50;
+}
+.content div p{
+    text-align: justify;
+    font-size: 17px;
+    color: #999;
+    letter-spacing: 1px;
+    width: 600px;
+}
+.content div a{
+    font-size: 16px;
+    color: #ff7f50;
+    text-decoration: none;
+    line-height: 60px;
+    padding: 10px 14px;
+    border: 1px solid #ff7f50;
+    outline: none;
+    transition: 0.3s ease-in-out;
+    letter-spacing: 0.7px;
+}
+.content div a:hover{
+    border: none;
+    background: #ff7f50;
+    color: #fff;
+}
+
+/* About Page */
+
+.about{
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    overflow: hidden;
+    border-bottom: 1px solid #ccc;
+}
+.about .title-name{
+    position: relative;
+    font-size: 40px;
+    color: #444;
+    text-align: center;
+    font-weight: 600;
+    padding-top: 40px;
+    letter-spacing: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about .title-name::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 400px;
+    height: 3px;
+    background: #ff7b00;
+}
+.about .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 60px;
+    margin-top: 50px;
+    margin-bottom: 60px;
+}
+.about .container img{
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.about .container .about-content{
+    margin-left: 100px;
+    padding: 40px 20px;
+}
+.about .container .about-content h1{
+    font-size: 40px;
+    color: #444;
+
+}
+.about .container .about-content p{
+    letter-spacing: 1px;
+    color: #777;
+    text-align: justify;
+    font-size: 16px;
+}
+.about .container .about-content .about-btn{
+    text-decoration: none;
+    font-size: 1em;
+    color: #fff;
+    background: #0084f0;
+    padding: 12px 16px;
+    letter-spacing: 1px;
+    line-height: 60px;
+}
+/* Teachers Page */
+
+.teacher-page{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    overflow: hidden;
+    padding: 150px 0;
+    border-bottom: 1px solid #ccc;
+}
+.teacher-page .title-techer{
+    position: absolute;
+    left: 50%;
+    top: 30px;
+    transform: translateX(-50%);
+    font-size: 50px;
+    color: #444;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.teacher-page .title-techer::before{
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 3px;
+    background: #ff0066;
+    bottom: 0;
+}
+.teacher-page .container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 0 30px;
+}
+.teacher-page .container .box{
+    margin: 40px;
+    background: #fff;
+    padding: 40px 30px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    width: 400px;
+    height: 350px;
+    border-radius: 6px;
+}
+.teacher-page .container .box h2{
+    font-size: 30px;
+    color: #333;
+}
+.teacher-page .container .box p{
+    text-align: left;
+    font-size: 16px;
+    color: #999;
+    letter-spacing: 1px;
+}
+.teacher-page .container .box a{
+    text-decoration: none;
+    font-size: 17px;
+    color: #ff0066;
+    border: 1px solid #ff0066;
+    padding: 10px 12px;
+    line-height: 60px;
+    transition: 0.5s;
+}
+.teacher-page .container .box a:hover{
+    background: #ff0066;
+    border: none;
+    color: #fff;
+}
+.gallery{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.gallery .title-gallery{
+    position: relative;
+    font-size: 40px;
+    color: #444;
+    text-align: center;
+    padding: 20px 0;
+    font-weight: 600;
+    letter-spacing: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gallery .title-gallery::before{
+    content: "";
+    position: absolute;
+    bottom: 15px;
+    width: 400px;
+    height: 3px;
+    background: #0084f0;
+}
+.gallery .container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+}
+.gallery .container .imgBx-100{
+    width: 50%;
+    height: 100vh;
+}
+.gallery .container .imgBx-100 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.gallery .container .imgBox{
+    width: 100%;
+    height: 100vh;
+}
+.gallery .container .imgBx-50{
+    width: 100%;
+    height: 50vh;
+}
+.gallery .container .imgBx-50 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.gallery .container .imgBx-25{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    height: 50vh;
+}
+.gallery .container .imgBx-25 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* Contact Me */
+
+.contact-me{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 40px 0; 
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.contact-me .container{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    overflow: hidden;
+}
+.contact-me .title-contact{
+    position: relative;
+    font-size: 40px;
+    color: #333;
+    text-align: center;
+    letter-spacing: 2px;
+    padding: 20px 0;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact-me .title-contact::before{
+    content: "";
+    position: absolute;
+    bottom: 20px;
+    width: 300px;
+    height: 3px;
+    background: #00ff80;
+}
+.contact-me .imgContact{
+    width: 50%;
+    height: 500px;
+}
+.contact-me .imgContact img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 0 0 30px rgba(0,0,0,0.1),
+                0 0 60px rgba(0,0,0,0.2);
+}
+.contact-me form{
+    width: 50%;
+    height: 500px;
+    background: #fff;
+    padding: 40px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1),
+                0 0 40px rgba(0,0,0,0.2);
+                overflow: hidden;
+}
+.contact-me form .user-block{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.contact-me form .user-block .box{
+    padding: 0;
+}
+.contact-me form .user-block .box h2{
+    font-weight: 500;
+    font-size: 25px;
+}
+.contact-me form .user-block .box .text{
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #111;
+    background: transparent;
+    width: 100%;
+    font-size: 16px;
+    color: #222;
+    transition: 0.3s linear;
+}
+.contact-me form .user-block .box .text:focus,
+.contact-me form .user-block .box .text:valid,
+.contact-me form .email-block .email:focus,
+.contact-me form .email-block .email:valid{
+    border-color: #00ff62;
+}
+.contact-me form  .email-block{
+    width: 100%;
+    margin: 20px 0;
+}
+.contact-me form .email-block h2{
+    font-weight: 500;
+    color: #222;
+}
+.contact-me form .email-block .email{
+    width: 100%;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #111;
+    font-size: 16px;
+    color: #222;
+    transition: 0.3s linear;
+}
+.contact-me form .comment-block{
+    width: 100%;
+    height: 200px;
+}
+.contact-me form .comment-block .comment{
+    font-size: 16px;
+    resize: none;
+    width: 100%;
+    height: 200px;
+    outline: none;
+    padding: 20px;
+    border-radius: 6px;
+}
+.contact-me form .btn-contact{
+    margin-top: 15px;
+}
+.contact-me form .btn-contact button[type="submit"]{
+    color: #333;
+    border: 1px solid #333;
+    padding: 10px;
+    font-size: 17px;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    transition: 0.5s;
+    background: transparent;
+}
+.contact-me form .btn-contact button[type="submit"]:hover{
+    background: #333;
+    color: #fff;
+}
+footer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #fff;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    padding: 30px 60px;
+    overflow: hidden;
+}
+footer .text{
+    font-size: 20px;
+    color: #333;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+#scroll-top{
+    position: fixed;
+    top: -120%;
+    right: 2rem;
+    padding: .5rem 1.5rem;
+    font-size: 4rem;
+    background: #ff7f50;
+    color: #fff;
+    border-radius: .5rem;
+    transition: 0.5s linear;
+    z-index: 10000;
+}
+#scroll-top.active{
+    top: calc(100% -12rem);
+}
+/* Responsive WebSite */
+
+@media (max-width: 800px){
+    .sec1 .logo{
+        margin: 0;
+    }
+    .content{
+        padding: 20px;
+    }
+    .content div{
+        padding: 0;
+    }
+    .content div h2{
+        font-size: 3em;
+    }
+    .content div p{
+        text-align: left;
+        width: auto; 
+    }
+    .sec1 #sidebar{
+        width: 250px;
+    }
+    .contact-me form .user-block{
+         display: block; 
+    }
+    .contact-me form .user-block h2{
+        margin-top: 20px;
+    }
+}
+@media (max-width: 960px){
+    .about .container{
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding: 0 20px;
+        margin-bottom: 30px;
+    }
+    .about .container .about-content{
+        margin-left: 0;
+    }
+    .about .container img{
+        width: 400px;
+        height: 400px;
+    }
+}
+@media (max-width: 600px){
+    .about .container img{
+        width: 300px;
+        height: 300px;
+    }
+    
+    }
+
+    @media (max-width: 1200px){
+        .teacher-page{
+            padding: 20px 0;
+        }
+        .teacher-page .container{
+            position: relative;
+            flex-direction: column;
+            flex-wrap: wrap;
+            display: flex;
+            padding: 100px 0;
+            padding-bottom: 30px;
+        }
+        .teacher-page .container .box{
+            margin: 30px 40px;
+        }
+    }
+    @media(max-width: 1100px){
+        .contact-me{
+            overflow: hidden;
+        }
+        .contact-me .container{
+            flex-direction: column;
+            flex-wrap: wrap;
+            padding: 0;
+            margin: 0;
+            padding: 40px 0;
+        }
+        .contact-me .container .imgContact{
+            width: 80%;
+        }
+        .contact-me .container form{
+            width: 80%;
+              margin: 40px 0;
+              padding: 40px;
+              height: 100%;
+        }
+    }
